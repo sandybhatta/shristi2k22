@@ -1,33 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-    <title>SHRISTI 2k21 | Web App Development</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
 
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="stylee.css" />
+
+    <title>Frontend Mentor | Intro section with dropdown navigation</title>
   </head>
-
   <body>
+    <header class="header">
+      <div class="wrapper">
+        <img src="images/logo.svg" alt="" class="header__logo" />
+        <button
+          class="header__btn"
+          aria-controls="main-navigation"
+          data-active="false"
+        ></button>
+        <nav>
+          <ul class="main-navigation" data-visible="false">
+            <li class="header_list_item">
+              <span
+                class="list_item_span dropdown-btn"
+                id="feat"
+                aria-controls="features__list"
+                >Features</span>
+              
+              <ul class="features__list dropdown-list" data-visible="true">
+                <li class="features__item"><a href="#">To-do List</a></li>
+                <li class="features__item"><a href="#">Calendar</a></li>
+                <li class="features__item"><a href="#">Reminders</a></li>
+                <li class="features__item"><a href="#">Planning</a></li>
+              </ul>
+            </li>
+            <li class="header_list_item">
+              <span class="list_item_span dropdown-btn" id="company"
+                >Company</span
+              >
+              <ul class="company__list dropdown-list" data-visible="true">
+                <li class="company__item"><a href="#">History</a></li>
+                <li class="company__item"><a href="#">Our Team</a></li>
+                <li class="company__item"><a href="#">Blog</a></li>
+              </ul>
+            </li>
+            <li class="header_list_item"><a href="#">Careers</a></li>
+            <li class="header_list_item"><a href="#">About</a></li>
+          </ul>
+        </nav>
+      </div>
 
-    Features
-    Company
-    Careers
-    About
+      <div class="header__cta">
+        <button class="header_ctabtn header_cta--login">Login</button>
+        <button class="header_ctabtn header_cta--register">Register</button>
+      </div>
+    </header>
 
-    Login
-    Register
-
-    Make remote work
-
-    Get your team in sync, no matter your location. Streamline processes,
-    create team rituals, and watch productivity soar.
-
-    Learn more
-
-
+    <main>
+      <div class="hero">
+        <div class="hero__img"></div>
+        <div class="hero__content">
+          <h1 class="hero__title">Make remote work</h1>
+          <p class="hero__description">
+            Get your team in sync, no matter your location. Streamlinep
+            processes, create team rituals, and watch productivity soar.
+          </p>
+          <button class="hero__btn">Learn more</button>
+          <ul class="hero__list">
+            <li class="hero_list_item">
+              <a href="#" class="hero_list_link"></a>
+            </li>
+            <li class="hero_list_item">
+              <a href="#" class="hero_list_link"></a>
+            </li>
+            <li class="hero_list_item">
+              <a href="#" class="hero_list_link"></a>
+            </li>
+            <li class="hero_list_item">
+              <a href="#" class="hero_list_link"></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </main>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+    <script src="./js/main.js"></script>
   </body>
-
-</html>
+</html
